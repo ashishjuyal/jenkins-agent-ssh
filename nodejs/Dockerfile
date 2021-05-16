@@ -12,6 +12,8 @@ RUN apt-get update && \
     apt-get install -qy openjdk-8-jre && \    
 #update the npx to the latest version. It is required to fulfill the required dependencies mentioned at https://gulpjs.com/docs/en/getting-started/quick-start/
     npm install --global --force npx && \
+# Installing gulp globally
+    npm install --global gulp && \
 # Cleanup old packages
     apt-get -qy autoremove && \
 # Add user jenkins to the image
