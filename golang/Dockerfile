@@ -9,7 +9,7 @@ RUN apt-get update && \
     mkdir -p /var/run/sshd && \
 #Install JDK 11 [fixing installation bug by creating below folder https://github.com/puckel/docker-airflow/issues/182#issuecomment-444683455]
 	mkdir -p /usr/share/man/man1 && \
-    apt-get install -qy openjdk-8-jre && \
+    apt-get install -qy openjdk-8-jre ansible && \
 # Cleanup old packages
     apt-get -qy autoremove && \
 # Add user jenkins to the image
